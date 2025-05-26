@@ -466,7 +466,7 @@ p, a, span, button, label,
   padding-left: 2rem;
   padding-right: 2rem;
   max-width: 800px;
-  margin: 10px, 0px, 0px, 30px;
+  margin: 10px 0px 0px 30px;
   font-size: 1.2rem;
   line-height: 1.6;
   color: var(--text-color);
@@ -689,6 +689,237 @@ body.dark .footer-nav a:hover::after,
 body.dark .back-to-top:hover::after {
   background-color: var(--highlight-color);
 }
+
+@media (max-width: 600px) {
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .grid-item {
+    width: 100%;
+    max-width: 90vw;
+  }
+
+  .grid-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .grid-item p {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .intro-text {
+    margin-top: 2rem; /* pushes text below header */
+  }
+}
+
+@media (max-width: 600px) {
+  /* Turn horizontal slider into vertical column */
+  .slider-container {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: visible;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .slide {
+    width: 90vw;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .image-wrapper,
+  .image-wrapper-desmos {
+    width: 100%;
+    height: auto;
+    max-height: none; /* Let height be determined by image content */
+  }
+
+  .image-wrapper img,
+  .image-wrapper-desmos iframe {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .nav-buttons {
+    display: none; /* Hide slider arrows on mobile */
+  }
+}
+
+/* Hide by default, show only on mobile */
+.back-to-top-mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .back-to-top-mobile {
+    position: fixed;
+    bottom: 2rem;
+    right: 1.5rem;
+    padding: 0.6em 1.2em;
+    background-color: var(--link-color);
+    color: white;
+    border: none;
+    border-radius: 999px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 999;
+    display: inline-block;
+    opacity: 0.85;
+    transition: background 0.3s, opacity 0.3s;
+  }
+
+  .back-to-top-mobile:hover {
+    background-color: var(--link-hover);
+    opacity: 1;
+  }
+
+  body.dark .back-to-top-mobile {
+    background-color: var(--footer-text);
+    color: black;
+  }
+
+  body.dark .back-to-top-mobile:hover {
+    background-color: var(--highlight-color);
+  }
+}
+
+@media (max-width: 600px) {
+  .image-wrapper-desmos {
+    width: 90vw;         /* almost full screen width */
+    height: 90vw;        /* same as width for a perfect square */
+    max-width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .image-wrapper-desmos iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* fit inside the square */
+    border: none;
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .intro-text {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    margin-top: 5rem; /* enough to clear fixed header */
+  }
+}
+
+@media (max-width: 600px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .typewriter {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .top-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .sidebar-toggle {
+    font-size: 20px;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .switch {
+    width: 48px;
+    height: 26px;
+  }
+
+  .slider-round::before {
+    width: 20px;
+    height: 20px;
+    bottom: 3px;
+    left: 3px;
+  }
+
+  input:checked + .slider-round::before {
+    transform: translateX(22px);
+  }
+}
+
+@media (max-width: 600px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+    gap: 0.5rem;
+  }
+
+  .typewriter {
+    align-items: flex-start;
+    width: 100%;
+    min-height: 60px;
+  }
+
+  .typewriter .line {
+    font-size: 28px; /* smaller header font */
+    line-height: 1.2;
+  }
+
+  .top-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* aligns left */
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .sidebar-toggle {
+    font-size: 20px;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .switch {
+    width: 48px;
+    height: 26px;
+  }
+
+  .slider-round::before {
+    width: 20px;
+    height: 20px;
+    bottom: 3px;
+    left: 3px;
+  }
+
+  input:checked + .slider-round::before {
+    transform: translateX(22px);
+  }
+}
+
+
 
 
 
