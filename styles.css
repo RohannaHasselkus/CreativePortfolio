@@ -462,7 +462,7 @@ p, a, span, button, label,
   width: 100%;}
 
   .intro-text {
-  padding-top: 1rem;
+  padding-top: 6rem;
   padding-left: 2rem;
   padding-right: 2rem;
   max-width: 800px;
@@ -717,7 +717,7 @@ body.dark .back-to-top:hover::after {
 
 @media (max-width: 600px) {
   .intro-text {
-    margin-top: 2rem; /* pushes text below header */
+    margin-top: 1rem; /* pushes text below header */
   }
 }
 
@@ -917,6 +917,17 @@ body.dark .back-to-top:hover::after {
   input:checked + .slider-round::before {
     transform: translateX(22px);
   }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 
