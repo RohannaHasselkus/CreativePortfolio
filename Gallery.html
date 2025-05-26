@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Art Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="main-header">
+  <div class="typewriter">
+    <span class="line">Rohanna Hasselkus</span>
+    <span class="line"><span id="typewriter-text"></span></span>
+  </div>
+
+  <div class="top-controls">
+    <button class="sidebar-toggle" id="openSidebar">◁ Menu</button>
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle" />
+      <span class="slider-round"></span>
+    </label>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebarMenu">
+  <button class="close-sidebar" id="closeSidebar"> Close ▷</button>
+  <a href="index.html">Beggining</a>
+  <a href="desmos.html">Desmos</a>
+</aside>
+
+<!-- MAIN CONTENT -->
+<section class="intro-text">
+  <p>Here's a selection of pieces created between the years 2022-2025, displaying technical ability in a diverse set of medium. Click on the images to learn more.</p>
+</section>
+
+<div class="content">
+  <div class="slider-wrapper">
+    <div class="slider-container" id="imageSlider">
+
+      <!-- Slide 1 -->
+      <div class="slide">
+        <div class="image-wrapper">
+        <a href="Pentatonic.html">
+          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/b6df2e211193891.671ed2f75696e.jpg" alt="Pentatonic" />
+          <div class="overlay">
+            <h2 class="title">Pentatonic</h2>
+            <p class="description">Acrylic on Broken Timpanis</p>
+          </div>
+        </a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide">
+        <div class="image-wrapper">
+          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/56edb8211205517.671f26b042ef2.jpg" alt="Forest Light" />
+          <div class="overlay">
+            <h2 class="title">Forest Light</h2>
+            <p class="description">Sunlight filtering through a dense pine forest canopy.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide">
+        <div class="image-wrapper">
+          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/fc8b48211193751.671ed1684c3d9.jpg" alt="Desert Storm" />
+          <div class="overlay">
+            <h2 class="title">Desert Storm</h2>
+            <p class="description">Dust swirls beneath dramatic skies in a desert landscape.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <button class="prev-button" data-target="imageSlider">❮</button>
+      <button class="next-button" data-target="imageSlider">❯</button>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>© 2025 Rohanna Hasselkus · Creative Portfolio</p>
+    <nav class="footer-nav">
+      <a href="mailto:rohanna.hasselkus@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/rohanna-hasselkus-85b174218">LinkedIn</a>
+      <a href="https://www.behance.net/rohanna_hasselkus" target="_blank">Behance Profile</a>
+    </nav>
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>

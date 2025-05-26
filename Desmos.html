@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desmos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="main-header">
+  <div class="typewriter">
+    <span class="line">Rohanna Hasselkus</span>
+    <span class="line"><span id="typewriter-text"></span></span>
+  </div>
+
+  <div class="top-controls">
+    <button class="sidebar-toggle" id="openSidebar"> ◁ Menu</button>
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle" />
+      <span class="slider-round"></span>
+    </label>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebarMenu">
+  <button class="close-sidebar" id="closeSidebar">Close ▷</button>
+ <a href="index.html">Beggining</a>
+  <a href="Gallery.html">Gallery</a>
+</aside>
+
+<!-- MAIN CONTENT -->
+<section class="intro-text">
+  <p>Explore a selection of original artworks created on a graphing calculator, click the buttons below to look at the equations used</p>
+</section>
+
+<div class="slider-wrapper-desmos">
+  <div class="slider-container" id="desmosSlider">
+
+    <!-- Slide 1 -->
+    <div class="slide desmos-slide">
+      <div class="image-wrapper-desmos">
+        <iframe src="https://www.desmos.com/calculator/jr74mqf1v3?embed&hideexpressions=true&hideresetbutton=true"
+                frameborder="0" width="100%" height="100%"></iframe>
+        <div class="overlay">
+          <h2 class="title">Algebra of a Gaze</h2>
+          <p class="description">2021 · 724 Equations</p>
+        </div>
+      </div>
+      <div class="desmos-button-wrapper">
+        <a href="https://www.desmos.com/calculator/jr74mqf1v3" target="_blank" class="desmos-button">
+          Launch Desmos <span class="spark">&#x25B6;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide desmos-slide">
+      <div class="image-wrapper-desmos">
+        <iframe src="https://www.desmos.com/calculator/2kis9jqgbe?embed&hideexpressions=true&hideresetbutton=true"
+                frameborder="0" width="100%" height="100%"></iframe>
+        <div class="overlay">
+          <h2 class="title">Reaching</h2>
+          <p class="description">2024 · 86 Equations</p>
+        </div>
+      </div>
+      <div class="desmos-button-wrapper">
+        <a href="https://www.desmos.com/calculator/2kis9jqgbe" target="_blank" class="desmos-button">
+          Launch Desmos <span class="spark">&#x25B6;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide desmos-slide">
+      <div class="image-wrapper-desmos">
+        <iframe src="https://www.desmos.com/calculator/mjt6rmnujl?embed&hideexpressions=true&hideresetbutton=true"
+                frameborder="0" width="100%" height="100%"></iframe>
+        <div class="overlay">
+          <h2 class="title">Under the Sinoid Sea</h2>
+          <p class="description">2021 · 277 Equations</p>
+        </div>
+      </div>
+      <div class="desmos-button-wrapper">
+        <a href="https://www.desmos.com/calculator/mjt6rmnujl" target="_blank" class="desmos-button">
+          Launch Desmos <span class="spark">&#x25B6;</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="nav-buttons">
+    <button class="prev-button" data-target="desmosSlider">❮</button>
+    <button class="next-button" data-target="desmosSlider">❯</button>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>© 2025 Rohanna Hasselkus · Creative Portfolio</p>
+    <nav class="footer-nav">
+      <a href="mailto:rohanna.hasselkus@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/rohanna-hasselkus-85b174218">LinkedIn</a>
+      <a href="https://www.behance.net/rohanna_hasselkus" target="_blank">Behance Profile</a>
+    </nav>
+  </div>
+</footer>
+
+
+<!-- SCRIPTS -->
+<script src="script.js"></script>
+</body>
+</html>
