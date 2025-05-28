@@ -9,11 +9,15 @@ function setupSlider(sliderId) {
 
   function scrollToIndex(index) {
     if (index < 0 || index >= slides.length) return;
+
     const targetSlide = slides[index];
+    const isMobile = window.innerWidth <= 600;
+
     slider.scrollTo({
-      left: targetSlide.offsetLeft,
+      [isMobile ? 'top' : 'left']: isMobile ? targetSlide.offsetTop : targetSlide.offsetLeft,
       behavior: 'smooth'
     });
+
     currentIndex = index;
   }
 
@@ -25,8 +29,8 @@ function setupSlider(sliderId) {
     scrollToIndex((currentIndex - 1 + slides.length) % slides.length);
   }
 
-  navNext.addEventListener('click', next);
-  navPrev.addEventListener('click', prev);
+  if (navNext) navNext.addEventListener('click', next);
+  if (navPrev) navPrev.addEventListener('click', prev);
 }
 
 // === PAGE INITIALIZATION ===
@@ -99,9 +103,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-
-
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
