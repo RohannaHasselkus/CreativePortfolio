@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desmos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body class="welcome-body">
+
+<header class="main-header">
+  <div class="typewriter">
+    <span class="line">Commission Me</span>
+  </div>
+
+  <div class="top-controls">
+    <button class="sidebar-toggle" id="openSidebar"> ◁ Menu</button>
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle" />
+      <span class="slider-round"></span>
+    </label>
+  </div>
+</header>
+
+<aside class="sidebar" id="sidebarMenu">
+  <button class="close-sidebar" id="closeSidebar">Close ▷</button>
+ <a href="index.html">Beggining</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="commission.html">Desmos</a>
+</aside>
+
+<form action="https://formspree.io/f/xeozepqg" method="POST" style="max-width:400px; margin:auto; text-align: left;">
+  <h2>Commission Request</h2>
+
+  <label for="name">Your Name:</label><br />
+  <input type="text" id="name" name="name" required placeholder="John Doe" style="width:100%; padding:8px; margin:6px 0" /><br />
+
+  <label for="email">Your Email:</label><br />
+  <input type="email" id="email" name="_replyto" required placeholder="you@example.com" style="width:100%; padding:8px; margin:6px 0" /><br />
+
+  <label for="details">What would you like me to create?</label><br />
+  <textarea id="details" name="details" rows="5" required placeholder="Describe your commission..." style="width:100%; padding:8px; margin:6px 0"></textarea><br />
+
+  <label for="phone">Phone Number (optional):</label>
+ <input type="tel" id="phone" name="phone" placeholder="+1 555 234 5678" />
+
+<label for="country">Country:</label>
+<select id="country" name="country" required>
+  <option value="" disabled selected>Select your country</option>
+  <option value="United States">United States</option>
+  <option value="Canada">Canada</option>
+  <option value="United Kingdom">United Kingdom</option>
+  <option value="Australia">Australia</option>
+  <option value="Germany">Germany</option>
+  <option value="France">France</option>
+  <option value="India">India</option>
+  <option value="Japan">Japan</option>
+  <option value="Brazil">Brazil</option>
+  <option value="Mexico">Mexico</option>
+  <option value="Other">Other</option>
+</select>
+  <label for="budget">Budget (optional):</label><br />
+  <input type="text" id="budget" name="budget" placeholder="$100" style="width:100%; padding:8px; margin:6px 0" /><br />
+
+  <button type="submit" class="desmos-button">
+  Send Request
+</button>
+</form>
+<!-- SCRIPTS -->
+<script src="script.js"></script>
+</body>
+</html>
