@@ -930,8 +930,198 @@ html, body {
   width: 100%;
 }
 
+form {
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  max-width: 400px;
+  margin: 3rem auto 4rem;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--link-color);
+}
+
+form h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1.5px solid var(--link-color);
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--link-hover);
+  box-shadow: 0 0 6px var(--link-hover);
+}
+
+form button[type="submit"] {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 12px 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background-color: var(--link-color);
+  color: var(--highlight-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: var(--link-hover);
+  color: var(--highlight-color);
+}
+
+form button[type="submit"]:active {
+  transform: scale(0.97);
+}
 
 
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1.5px solid var(--link-color);
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  appearance: none; /* removes default arrow on some browsers */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 4 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' stroke='%233e3a36' stroke-width='.75' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 8px 10px;
+}
+
+form select:focus {
+  outline: none;
+  border-color: var(--link-hover);
+  box-shadow: 0 0 6px var(--link-hover);
+}
+
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border: 1.5px solid var(--link-color);
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+
+  /* Remove default arrow on some browsers */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Custom arrow */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 4 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' stroke='%233e3a36' stroke-width='.75' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 8px 10px;
+}
+
+form select:focus {
+  outline: none;
+  border-color: var(--link-hover);
+  box-shadow: 0 0 6px var(--link-hover);
+}
 
 
+form input[type="tel"],
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border: 1.5px solid var(--link-color);
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+form input[type="tel"]:focus,
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus,
+form select:focus {
+  outline: none;
+  border-color: var(--link-hover);
+  box-shadow: 0 0 6px var(--link-hover);
+}
+
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border: 1.5px solid var(--link-color);
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 4 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' stroke='%233e3a36' stroke-width='.75' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 8px 10px;
+}
+
+form select option {
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
 
